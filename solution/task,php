@@ -12,7 +12,7 @@ function countLeadsForSetDates($api, $statuses = array(), $idDateField, $date, $
 		$dateTimeEndDay = strtotime($date . ' 23:59:59');
 	} elseif (is_int($date)) {
 		$dateTimeBeginDay = $date;
-		$dateTimeEndDay = $date + 86399; // Прибавление количества секунд от 00:00:00 до 23:59:59
+		$dateTimeEndDay = $date + 86399; 
 	} else {
 		$data = "Неверный формат даты";
 		file_put_contents('log.txt', $data, FILE_APPEND | LOCK_EX);
